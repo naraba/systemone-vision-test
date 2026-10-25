@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# ツール
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# エディタ / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# このプロジェクトの生成物
+artifacts/
+image/
+
+# 効果音の素材（各自で sound/ に right.mp3 / wrong.mp3 を置く）
+sound/*
+!sound/.gitkeep
+
+# API キー・認証情報（絶対にコミットしない）
+.env
+.jev_api_key
+secrets/
+
+# ローカル専用のメモ（リポジトリには含めない）
+docs/gui_library_proposal.md
+docs/localhost_ipv6_latency.md

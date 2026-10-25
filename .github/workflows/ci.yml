@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+# 既定の権限は読み取りだけにする（必要以上の権限を与えない）
+permissions:
+  contents: read
+
+# 同じブランチで新しい実行が始まったら、古い実行は打ち切る
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    # 動作確認済みの OS（Windows 11）に合わせる
+    runs-on: windows-latest
+    timeout-minutes: 20
+    env:
+      # コンソールの文字コードに左右されないよう UTF-8 モードで動かす
+      PYTHONUTF8: "1"
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          # pyproject の requires-python（>=3.10）に合わせて下限で検証する
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+
+      - name: 依存をインストール
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+
+      - name: 静的解析（ruff）
+        run: |
+          ruff check .
+          ruff format --check .
+
+      - name: テスト（pytest）
+        run: pytest

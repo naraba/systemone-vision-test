@@ -1,0 +1,11 @@
+# 改行コードは LF に統一する（Windows でも同じ）
+* text=auto eol=lf
+
+# バイナリは変換しない
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.mp3 binary
+*.wav binary
+*.ogg binary
+*.ico binary
