@@ -1,5 +1,7 @@
 # System Oneによる視力検査もどき
 
+[![CI](https://github.com/naraba/systemone-vision-test/actions/workflows/ci.yml/badge.svg)](https://github.com/naraba/systemone-vision-test/actions/workflows/ci.yml)
+
 System One のモデル（ローカルの `clef` / `clef-flash`、インターネット経由の `jev`）に
 ランドルト環の画像を判定させ、見え方のシミュレーション（生成モード）ごとに「どこまで見えるか」を
 測るプログラム。

@@ -30,6 +30,11 @@ dev = [
 systemone-vision-test = "systemone_vision_test.gui.app:main"
 systemone-vision-benchmark = "systemone_vision_test.benchmark.cli:main"
 
+[project.urls]
+Homepage = "https://github.com/naraba/systemone-vision-test"
+Repository = "https://github.com/naraba/systemone-vision-test"
+Issues = "https://github.com/naraba/systemone-vision-test/issues"
+
 [tool.setuptools.packages.find]
 where = ["src"]
 include = ["systemone_vision_test*"]
