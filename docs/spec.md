@@ -1,12 +1,12 @@
-# System Oneによる疑似視覚検査
+# System Oneによる視力検査もどき
 
-System One のモデルを使って、ランドルト環ベースの疑似視覚検査のプログラムを作る。
+System One のモデルを使って、ランドルト環ベースの視力検査もどきのプログラムを作る。
 対象はローカルの `clef` / `clef-flash` と、インターネット経由の `jev`（TypeSafe / OpenRouter）。
 
 ## プログラム構成
 
 * ランドルト環の画像を生成する処理と、その画像を System One の API に投げて視覚検査をする処理に大別される
-* プログラムはGUIを持つ。ウィンドウタイトルは「System Oneによる疑似視覚検査」とする（`config.WINDOW_TITLE`）
+* プログラムはGUIを持つ。ウィンドウタイトルは「System Oneによる視力検査もどき」とする（`config.WINDOW_TITLE`）
 * プログラム自体はオフラインで動作する（インターネット接続は不要）。**jev を選んだときだけ**インターネット接続を使う
 * HTTP を扱うのは `services/` のクライアントだけに限定する（通信先は System One のエンドポイントのみ）。
   * `services/systemone.py`：クライアント共通（送信・認証ヘッダ・エラー処理・応答の解釈の入口）

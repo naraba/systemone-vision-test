@@ -196,7 +196,7 @@ ASTIGMATISM_STRENGTH_SCALE = 0.01
 # GUI
 # ---------------------------------------------------------------------------
 
-WINDOW_TITLE = "System Oneによる疑似視覚検査"
+WINDOW_TITLE = "System Oneによる視力検査もどき"
 
 #: 左の操作用パネルの幅（px）
 CONTROL_PANEL_WIDTH = 300
