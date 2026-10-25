@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "systemone-vision-test"
 version = "0.1.0"
-description = "System One による視力検査もどき（ランドルト環ベース。clef / clef-flash / jev 対応）"
+description = "System Oneによる視力検査もどき（ランドルト環ベース。clef / clef-flash / jev 対応）"
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
